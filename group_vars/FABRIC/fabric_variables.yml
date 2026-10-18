@@ -57,6 +57,7 @@ cv_settings:
     clusters:
       - name: primary
         region: "staging"
+        token_file: "/mnt/flash/cv-onboarding-token"
   # onprem_clusters:
   #   - name: primary
   #     servers:
