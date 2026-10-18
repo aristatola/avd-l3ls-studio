@@ -13,6 +13,7 @@ topology:
             image: arista/ceos:latest
             binds:
                 - interface_mapping.json:/mnt/flash/EosIntfMapping.json:ro
+                - cv-onboarding-token:/mnt/flash/cv-onboarding-token
     defaults:
         kind: arista_ceos
     nodes:

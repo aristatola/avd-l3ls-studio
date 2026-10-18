@@ -52,10 +52,15 @@ default_interfaces:
 
 # CloudVision Portal definitions
 cv_settings:
-  onprem_clusters:
-    - name: primary
-      servers:
-        - name: 192.168.1.12
+  cvaas:
+    enabled: true
+    clusters:
+      - name: primary
+        region: "staging"
+  # onprem_clusters:
+  #   - name: primary
+  #     servers:
+  #       - name: 192.168.1.12
   terminattr:
     disable_aaa: true
 
