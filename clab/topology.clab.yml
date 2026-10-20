@@ -13,33 +13,50 @@ topology:
             image: arista/ceos:latest
             binds:
                 - interface_mapping.json:/mnt/flash/EosIntfMapping.json:ro
+                - cv-onboarding-token:/mnt/flash/cv-onboarding-token
     defaults:
         kind: arista_ceos
     nodes:
         dc1-spine1:
             mgmt-ipv4: 172.16.1.11
             startup-config: init-configs/dc1-spine1.cfg
+            binds:
+                - sn/dc1-spine1.txt:/mnt/flash/ceos-config:ro
         dc1-spine2:
             mgmt-ipv4: 172.16.1.12
             startup-config: init-configs/dc1-spine2.cfg
+            binds:
+                - sn/dc1-spine2.txt:/mnt/flash/ceos-config:ro
         dc1-leaf1a:
             mgmt-ipv4: 172.16.1.101
             startup-config: init-configs/dc1-leaf1a.cfg
+            binds:
+                - sn/dc1-leaf1a.txt:/mnt/flash/ceos-config:ro
         dc1-leaf1b:
             mgmt-ipv4: 172.16.1.102
             startup-config: init-configs/dc1-leaf1b.cfg
+            binds:
+                - sn/dc1-leaf1b.txt:/mnt/flash/ceos-config:ro
         dc1-leaf2a:
             mgmt-ipv4: 172.16.1.103
             startup-config: init-configs/dc1-leaf2a.cfg
+            binds:
+                - sn/dc1-leaf2a.txt:/mnt/flash/ceos-config:ro
         dc1-leaf2b:
             mgmt-ipv4: 172.16.1.104
             startup-config: init-configs/dc1-leaf2b.cfg
+            binds:
+                - sn/dc1-leaf2b.txt:/mnt/flash/ceos-config:ro
         dc1-leaf1c:
             mgmt-ipv4: 172.16.1.151
             startup-config: init-configs/dc1-leaf1c.cfg
+            binds:
+                - sn/dc1-leaf1c.txt:/mnt/flash/ceos-config:ro
         dc1-leaf2c:
             mgmt-ipv4: 172.16.1.152
             startup-config: init-configs/dc1-leaf2c.cfg
+            binds:
+                - sn/dc1-leaf2c.txt:/mnt/flash/ceos-config:ro
         dc1-leaf1-server1:
             mgmt-ipv4: 172.16.1.181
             startup-config: init-configs/dc1-leaf1-server1.cfg

@@ -34,6 +34,7 @@ l3leaf:
     - group: DC1_L3_LEAF1
       # ASN to be used by BGP for the group. Both devices in the MLAG pair will use the same BGP ASN
       bgp_as: 65101
+      campus_access_pod: RACK1
       nodes:
         # Definition of hostnames under the node_group
         - name: dc1-leaf1a
@@ -44,6 +45,7 @@ l3leaf:
           mgmt_ip: 172.16.1.102/24
     - group: DC1_L3_LEAF2
       bgp_as: 65102
+      campus_access_pod: RACK2
       nodes:
         - name: dc1-leaf2a
           id: 3

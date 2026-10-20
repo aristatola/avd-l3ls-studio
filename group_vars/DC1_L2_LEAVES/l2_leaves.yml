@@ -8,12 +8,14 @@ l2leaf:
 
   node_groups:
     - group: DC1_L2_LEAF1
+      campus_access_pod: RACK1
       uplink_switches: [dc1-leaf1a, dc1-leaf1b]
       nodes:
         - name: dc1-leaf1c
           id: 1
           mgmt_ip: 172.16.1.151/24
     - group: DC1_L2_LEAF2
+      campus_access_pod: RACK2
       uplink_switches: [dc1-leaf2a, dc1-leaf2b]
       nodes:
         - name: dc1-leaf2c
