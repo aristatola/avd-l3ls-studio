@@ -88,7 +88,7 @@ ip_name_server:
   vrfs:
   - name: MGMT
     servers:
-    - ip_address: 192.168.1.1
+    - ip_address: 8.8.8.8
 ip_routing: true
 ip_virtual_router_mac_address: 00:1c:73:00:00:99
 local_users:
@@ -137,6 +137,71 @@ metadata:
   fabric_name: FABRIC
   validate_hardware:
     enabled: false
+  cv_tags:
+    device_tags:
+    - name: topology_hint_network_type
+      value: campusV2
+    - name: topology_hint_type
+      value: Leaf
+    - name: Role
+      value: Leaf
+    - name: Campus
+      value: SAT_TX
+    - name: Campus-Pod
+      value: DC1_L3LS
+    - name: Access-Pod
+      value: RACK1
+    interface_tags:
+    - interface: Ethernet3
+      tags:
+      - name: Link-Type
+        value: AVD-Managed
+      - name: Link-Type
+        value: Fabric
+      - name: Link-Type
+        value: MLAG
+    - interface: Ethernet4
+      tags:
+      - name: Link-Type
+        value: AVD-Managed
+      - name: Link-Type
+        value: Fabric
+      - name: Link-Type
+        value: MLAG
+    - interface: Ethernet1
+      tags:
+      - name: Link-Type
+        value: AVD-Managed
+      - name: Link-Type
+        value: Fabric
+      - name: Link-Type
+        value: Uplink
+    - interface: Ethernet2
+      tags:
+      - name: Link-Type
+        value: AVD-Managed
+      - name: Link-Type
+        value: Fabric
+      - name: Link-Type
+        value: Uplink
+    - interface: Ethernet8
+      tags:
+      - name: Link-Type
+        value: AVD-Managed
+      - name: Link-Type
+        value: Fabric
+      - name: Link-Type
+        value: Downlink
+    - interface: Ethernet5
+      tags:
+      - name: Link-Type
+        value: AVD-Managed
+    - interface: Management1
+      tags:
+      - name: Link-Type
+        value: AVD-Managed
+      - name: Link-Type
+        value: Management
 mlag_configuration:
   domain_id: DC1_L3_LEAF1
   local_interface: Vlan4094

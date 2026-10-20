@@ -1,6 +1,11 @@
 ---
 # Common AVD group variables
 fabric_name: FABRIC
+campus: SAT_TX
+campus_pod: DC1_L3LS
+generate_cv_tags: 
+  topology_hints: true
+  campus_fabric: true
 
 # Generate CSVs with fabric link info.
 eos_designs_documentation:
@@ -68,7 +73,7 @@ cv_settings:
 # DNS Server
 dns_settings:
   servers:
-    - ip_address: 192.168.1.1
+    - ip_address: 8.8.8.8
 
 # NTP Servers IP or DNS name, first NTP server will be preferred, and sourced from Management VRF
 ntp_settings:

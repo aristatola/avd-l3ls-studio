@@ -71,12 +71,12 @@ interface Management1
 
 | Name Server | VRF | Priority |
 | ----------- | --- | -------- |
-| 192.168.1.1 | MGMT | - |
+| 8.8.8.8 | MGMT | - |
 
 #### IP Name Servers Device Configuration
 
 ```eos
-ip name-server vrf MGMT 192.168.1.1
+ip name-server vrf MGMT 8.8.8.8
 ```
 
 ### Domain Lookup

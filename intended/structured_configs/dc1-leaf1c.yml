@@ -58,7 +58,7 @@ ip_name_server:
   vrfs:
   - name: MGMT
     servers:
-    - ip_address: 192.168.1.1
+    - ip_address: 8.8.8.8
 local_users:
 - name: admin
   privilege: 15
@@ -86,6 +86,47 @@ metadata:
   fabric_name: FABRIC
   validate_hardware:
     enabled: false
+  cv_tags:
+    device_tags:
+    - name: topology_hint_network_type
+      value: campusV2
+    - name: topology_hint_type
+      value: Leaf
+    - name: Role
+      value: Leaf
+    - name: Campus
+      value: SAT_TX
+    - name: Campus-Pod
+      value: DC1_L3LS
+    - name: Access-Pod
+      value: RACK1
+    interface_tags:
+    - interface: Ethernet1
+      tags:
+      - name: Link-Type
+        value: AVD-Managed
+      - name: Link-Type
+        value: Fabric
+      - name: Link-Type
+        value: Uplink
+    - interface: Ethernet2
+      tags:
+      - name: Link-Type
+        value: AVD-Managed
+      - name: Link-Type
+        value: Fabric
+      - name: Link-Type
+        value: Uplink
+    - interface: Ethernet5
+      tags:
+      - name: Link-Type
+        value: AVD-Managed
+    - interface: Management1
+      tags:
+      - name: Link-Type
+        value: AVD-Managed
+      - name: Link-Type
+        value: Management
 ntp:
   local_interface:
     name: Management1

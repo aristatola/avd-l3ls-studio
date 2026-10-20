@@ -11,3 +11,12 @@ start: ## Deploy the lab
 .PHONY: stop
 stop: ## Destroy the lab
 	sudo containerlab destroy --debug --topo $(CURRENT_DIR)/clab/topology.clab.yml --cleanup
+
+.PHONY: build
+build: ## Build AVD
+	ansible-playbook build.yml
+
+.PHONY: deploy
+deploy: ## Deploy AVD to CVP
+	ansible-playbook deploy-cvp.yml
+
